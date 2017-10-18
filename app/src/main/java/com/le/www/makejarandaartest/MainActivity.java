@@ -2,6 +2,9 @@ package com.le.www.makejarandaartest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+
+import com.le.www.toollibrary.ToolLibrary;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // 使用module中的类
+        ToolLibrary.test();
+        // 使用module中资源
+        String s = getString(R.string.test);
+
+        Log.i("ToolLibrary", s);
     }
 }
